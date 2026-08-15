@@ -1,0 +1,12 @@
+#PLOT THE SLOPE FIELD FOR DY/DX = X+Y AND SKETCH SOLUTION CURVES FOR DIFFERENT INITIAL CONDITIONS
+import numpy as np
+import matplotlib.pyplot as plt
+x=np.linspace(-5,5,20)
+y=np.linspace(-5,5,20)
+X,Y=np.meshgrid(x,y)
+M=X+Y
+U=1/np.sqrt(1+M**2)
+V=M/np.sqrt(1+M**2)
+plt.quiver(X,Y,U,V)
+plt.title("SLOPE FIELD;DY/DX=X+Y')
+plt.show()
